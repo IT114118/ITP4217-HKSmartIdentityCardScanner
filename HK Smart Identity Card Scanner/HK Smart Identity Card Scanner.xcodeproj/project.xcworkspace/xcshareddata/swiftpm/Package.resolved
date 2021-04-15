@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ImagePickerView",
+        "repositoryURL": "https://github.com/ralfebert/ImagePickerView",
+        "state": {
+          "branch": null,
+          "revision": "b84dd1c85a65cddba40c89699cd63ba0cb248dbd",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "libtesseract",
+        "repositoryURL": "https://github.com/SwiftyTesseract/libtesseract.git",
+        "state": {
+          "branch": null,
+          "revision": "214a36e04d740795d7ba2f07c6108944d0136f8a",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
+        "state": {
+          "branch": null,
+          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "SwiftyTesseract",
+        "repositoryURL": "https://github.com/SwiftyTesseract/SwiftyTesseract",
+        "state": {
+          "branch": null,
+          "revision": "1393d15d0278673dd89f2ba21d3fb748f99e02ce",
+          "version": "4.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

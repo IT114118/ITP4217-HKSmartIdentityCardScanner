@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0207049261C6CBA00B482AF /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0207048261C6CBA00B482AF /* SwiftyJSON */; };
+		D020704C261C6FBD00B482AF /* ctc2hanzi.json in Resources */ = {isa = PBXBuildFile; fileRef = D020704B261C6FBD00B482AF /* ctc2hanzi.json */; };
+		D05CE09E261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */; };
+		D05CE0A0261B4329006808CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE09F261B4329006808CD /* ContentView.swift */; };
+		D05CE0A2261B432A006808CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0A1261B432A006808CD /* Assets.xcassets */; };
+		D05CE0A5261B432A006808CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0A4261B432A006808CD /* Preview Assets.xcassets */; };
+		D05CE0A7261B432A006808CD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0A6261B432A006808CD /* Persistence.swift */; };
+		D05CE0AA261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0A8261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld */; };
+		D05CE0BB261B46BD006808CD /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0BA261B46BD006808CD /* CardData.swift */; };
+		D05CE0BF261B4789006808CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0BE261B4789006808CD /* HomeView.swift */; };
+		D05CE0C6261B4D63006808CD /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0C5261B4D63006808CD /* ImagePickerView */; };
+		D05CE0CA261B522B006808CD /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0C9261B522B006808CD /* TextRecognitionService.swift */; };
+		D05CE0CF261B6465006808CD /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0CE261B6465006808CD /* SwiftyTesseract */; };
+		D05CE0E7261BC98E006808CD /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0E6261BC98E006808CD /* tessdata */; };
+		D05CE0EE261BDB8F006808CD /* ChineseCommercialCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D020704B261C6FBD00B482AF /* ctc2hanzi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ctc2hanzi.json; sourceTree = "<group>"; };
+		D05CE09A261B4329006808CD /* HK Smart Identity Card Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HK Smart Identity Card Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HK_Smart_Identity_Card_ScannerApp.swift; sourceTree = "<group>"; };
+		D05CE09F261B4329006808CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D05CE0A1261B432A006808CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D05CE0A4261B432A006808CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D05CE0A6261B432A006808CD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D05CE0A9261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HK_Smart_Identity_Card_Scanner.xcdatamodel; sourceTree = "<group>"; };
+		D05CE0AB261B432A006808CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05CE0BA261B46BD006808CD /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		D05CE0BE261B4789006808CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D05CE0C9261B522B006808CD /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
+		D05CE0E6261BC98E006808CD /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCommercialCodeService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D05CE097261B4329006808CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0207049261C6CBA00B482AF /* SwiftyJSON in Frameworks */,
+				D05CE0C6261B4D63006808CD /* ImagePickerView in Frameworks */,
+				D05CE0CF261B6465006808CD /* SwiftyTesseract in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D05CE091261B4329006808CD = {
+			isa = PBXGroup;
+			children = (
+				D05CE09C261B4329006808CD /* HK Smart Identity Card Scanner */,
+				D05CE09B261B4329006808CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D05CE09B261B4329006808CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE09A261B4329006808CD /* HK Smart Identity Card Scanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D05CE09C261B4329006808CD /* HK Smart Identity Card Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE0E9261BDB23006808CD /* telecode */,
+				D05CE0E6261BC98E006808CD /* tessdata */,
+				D05CE0C8261B520D006808CD /* Services */,
+				D05CE0C2261B489C006808CD /* ViewModels */,
+				D05CE0B9261B467B006808CD /* Views */,
+				D05CE0B2261B45EB006808CD /* Models */,
+				D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */,
+				D05CE09F261B4329006808CD /* ContentView.swift */,
+				D05CE0A1261B432A006808CD /* Assets.xcassets */,
+				D05CE0A6261B432A006808CD /* Persistence.swift */,
+				D05CE0AB261B432A006808CD /* Info.plist */,
+				D05CE0A8261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld */,
+				D05CE0A3261B432A006808CD /* Preview Content */,
+			);
+			path = "HK Smart Identity Card Scanner";
+			sourceTree = "<group>";
+		};
+		D05CE0A3261B432A006808CD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE0A4261B432A006808CD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D05CE0B2261B45EB006808CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE0BA261B46BD006808CD /* CardData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D05CE0B9261B467B006808CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE0BE261B4789006808CD /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D05CE0C2261B489C006808CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D05CE0C8261B520D006808CD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D05CE0C9261B522B006808CD /* TextRecognitionService.swift */,
+				D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D05CE0E9261BDB23006808CD /* telecode */ = {
+			isa = PBXGroup;
+			children = (
+				D020704B261C6FBD00B482AF /* ctc2hanzi.json */,
+			);
+			path = telecode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D05CE099261B4329006808CD /* HK Smart Identity Card Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D05CE0AE261B432A006808CD /* Build configuration list for PBXNativeTarget "HK Smart Identity Card Scanner" */;
+			buildPhases = (
+				D05CE096261B4329006808CD /* Sources */,
+				D05CE097261B4329006808CD /* Frameworks */,
+				D05CE098261B4329006808CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HK Smart Identity Card Scanner";
+			packageProductDependencies = (
+				D05CE0C5261B4D63006808CD /* ImagePickerView */,
+				D05CE0CE261B6465006808CD /* SwiftyTesseract */,
+				D0207048261C6CBA00B482AF /* SwiftyJSON */,
+			);
+			productName = "HK Smart Identity Card Scanner";
+			productReference = D05CE09A261B4329006808CD /* HK Smart Identity Card Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05CE092261B4329006808CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					D05CE099261B4329006808CD = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = D05CE095261B4329006808CD /* Build configuration list for PBXProject "HK Smart Identity Card Scanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D05CE091261B4329006808CD;
+			packageReferences = (
+				D05CE0C4261B4D63006808CD /* XCRemoteSwiftPackageReference "ImagePickerView" */,
+				D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
+				D0207047261C6CBA00B482AF /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
+			productRefGroup = D05CE09B261B4329006808CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D05CE099261B4329006808CD /* HK Smart Identity Card Scanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D05CE098261B4329006808CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05CE0A5261B432A006808CD /* Preview Assets.xcassets in Resources */,
+				D05CE0A2261B432A006808CD /* Assets.xcassets in Resources */,
+				D05CE0E7261BC98E006808CD /* tessdata in Resources */,
+				D020704C261C6FBD00B482AF /* ctc2hanzi.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D05CE096261B4329006808CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05CE0BB261B46BD006808CD /* CardData.swift in Sources */,
+				D05CE0CA261B522B006808CD /* TextRecognitionService.swift in Sources */,
+				D05CE0A7261B432A006808CD /* Persistence.swift in Sources */,
+				D05CE0A0261B4329006808CD /* ContentView.swift in Sources */,
+				D05CE0EE261BDB8F006808CD /* ChineseCommercialCodeService.swift in Sources */,
+				D05CE0BF261B4789006808CD /* HomeView.swift in Sources */,
+				D05CE09E261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift in Sources */,
+				D05CE0AA261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D05CE0AC261B432A006808CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D05CE0AD261B432A006808CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D05CE0AF261B432A006808CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HK Smart Identity Card Scanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "HK Smart Identity Card Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.it114118.HK-Smart-Identity-Card-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D05CE0B0261B432A006808CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HK Smart Identity Card Scanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "HK Smart Identity Card Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.it114118.HK-Smart-Identity-Card-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D05CE095261B4329006808CD /* Build configuration list for PBXProject "HK Smart Identity Card Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05CE0AC261B432A006808CD /* Debug */,
+				D05CE0AD261B432A006808CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05CE0AE261B432A006808CD /* Build configuration list for PBXNativeTarget "HK Smart Identity Card Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05CE0AF261B432A006808CD /* Debug */,
+				D05CE0B0261B432A006808CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0207047261C6CBA00B482AF /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		D05CE0C4261B4D63006808CD /* XCRemoteSwiftPackageReference "ImagePickerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ralfebert/ImagePickerView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyTesseract/SwiftyTesseract";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0207048261C6CBA00B482AF /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0207047261C6CBA00B482AF /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D05CE0C5261B4D63006808CD /* ImagePickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D05CE0C4261B4D63006808CD /* XCRemoteSwiftPackageReference "ImagePickerView" */;
+			productName = ImagePickerView;
+		};
+		D05CE0CE261B6465006808CD /* SwiftyTesseract */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
+			productName = SwiftyTesseract;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D05CE0A8261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D05CE0A9261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodel */,
+			);
+			currentVersion = D05CE0A9261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodel */;
+			path = HK_Smart_Identity_Card_Scanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D05CE092261B4329006808CD /* Project object */;
+}
