@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES" codeGenerationType="class">
-        <attribute name="ccc" optional="YES" attributeType="String"/>
+        <attribute name="cccString" optional="YES" attributeType="String"/>
         <attribute name="chineseName" optional="YES" attributeType="String"/>
         <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
         <attribute name="dateOfIssue" optional="YES" attributeType="String"/>
@@ -9,15 +9,18 @@
         <attribute name="englishName" optional="YES" attributeType="String"/>
         <attribute name="face" optional="YES" attributeType="Binary"/>
         <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sex" optional="YES" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="Binary"/>
         <attribute name="symbols" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-63" positionY="-9" width="128" height="194"/>
+        <element name="Card" positionX="-63" positionY="-9" width="128" height="239"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
     </elements>
 </model>

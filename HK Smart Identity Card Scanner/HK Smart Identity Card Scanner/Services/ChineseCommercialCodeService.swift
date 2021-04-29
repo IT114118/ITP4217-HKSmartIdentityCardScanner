@@ -10,7 +10,7 @@ import SwiftyJSON
 
 class ChineseCommercialCodeService {
     static func convertToText(_ code: String) -> String {
-        let path = Bundle.main.path(forResource: "ctc2hanzi", ofType: "json")
+        let path = Bundle.main.path(forResource: "ccc", ofType: "json")
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!), options: .mappedIfSafe)
         let json = try! JSON(data: data)
 

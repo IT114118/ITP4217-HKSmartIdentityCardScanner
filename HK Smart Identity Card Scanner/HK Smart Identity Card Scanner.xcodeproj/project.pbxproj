@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D0207049261C6CBA00B482AF /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D0207048261C6CBA00B482AF /* SwiftyJSON */; };
-		D020704C261C6FBD00B482AF /* ctc2hanzi.json in Resources */ = {isa = PBXBuildFile; fileRef = D020704B261C6FBD00B482AF /* ctc2hanzi.json */; };
 		D05CE09E261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */; };
 		D05CE0A0261B4329006808CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE09F261B4329006808CD /* ContentView.swift */; };
 		D05CE0A2261B432A006808CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0A1261B432A006808CD /* Assets.xcassets */; };
@@ -16,16 +15,17 @@
 		D05CE0A7261B432A006808CD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0A6261B432A006808CD /* Persistence.swift */; };
 		D05CE0AA261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0A8261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld */; };
 		D05CE0BB261B46BD006808CD /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0BA261B46BD006808CD /* CardData.swift */; };
-		D05CE0BF261B4789006808CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0BE261B4789006808CD /* HomeView.swift */; };
 		D05CE0C6261B4D63006808CD /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0C5261B4D63006808CD /* ImagePickerView */; };
-		D05CE0CA261B522B006808CD /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0C9261B522B006808CD /* TextRecognitionService.swift */; };
 		D05CE0CF261B6465006808CD /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0CE261B6465006808CD /* SwiftyTesseract */; };
 		D05CE0E7261BC98E006808CD /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0E6261BC98E006808CD /* tessdata */; };
 		D05CE0EE261BDB8F006808CD /* ChineseCommercialCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */; };
+		D087482E2639CB4600F6E152 /* ccc.json in Resources */ = {isa = PBXBuildFile; fileRef = D087482D2639CB4600F6E152 /* ccc.json */; };
+		D08748312639D8A500F6E152 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08748302639D8A500F6E152 /* CardDetailView.swift */; };
+		D0CD7F2B2639F3A8003E81B2 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD7F2A2639F3A8003E81B2 /* AddCardView.swift */; };
+		D0CD7F2F2639F594003E81B2 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD7F2E2639F594003E81B2 /* CardListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D020704B261C6FBD00B482AF /* ctc2hanzi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ctc2hanzi.json; sourceTree = "<group>"; };
 		D05CE09A261B4329006808CD /* HK Smart Identity Card Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HK Smart Identity Card Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HK_Smart_Identity_Card_ScannerApp.swift; sourceTree = "<group>"; };
 		D05CE09F261B4329006808CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,10 +35,12 @@
 		D05CE0A9261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HK_Smart_Identity_Card_Scanner.xcdatamodel; sourceTree = "<group>"; };
 		D05CE0AB261B432A006808CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05CE0BA261B46BD006808CD /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
-		D05CE0BE261B4789006808CD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D05CE0C9261B522B006808CD /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
 		D05CE0E6261BC98E006808CD /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCommercialCodeService.swift; sourceTree = "<group>"; };
+		D087482D2639CB4600F6E152 /* ccc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ccc.json; sourceTree = "<group>"; };
+		D08748302639D8A500F6E152 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		D0CD7F2A2639F3A8003E81B2 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		D0CD7F2E2639F594003E81B2 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,6 @@
 				D05CE0C8261B520D006808CD /* Services */,
 				D05CE0C2261B489C006808CD /* ViewModels */,
 				D05CE0B9261B467B006808CD /* Views */,
-				D05CE0B2261B45EB006808CD /* Models */,
 				D05CE09D261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift */,
 				D05CE09F261B4329006808CD /* ContentView.swift */,
 				D05CE0A1261B432A006808CD /* Assets.xcassets */,
@@ -99,18 +100,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D05CE0B2261B45EB006808CD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D05CE0BA261B46BD006808CD /* CardData.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		D05CE0B9261B467B006808CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D05CE0BE261B4789006808CD /* HomeView.swift */,
+				D08748302639D8A500F6E152 /* CardDetailView.swift */,
+				D0CD7F2A2639F3A8003E81B2 /* AddCardView.swift */,
+				D0CD7F2E2639F594003E81B2 /* CardListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +113,7 @@
 		D05CE0C2261B489C006808CD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D05CE0BA261B46BD006808CD /* CardData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -125,7 +121,6 @@
 		D05CE0C8261B520D006808CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D05CE0C9261B522B006808CD /* TextRecognitionService.swift */,
 				D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */,
 			);
 			path = Services;
@@ -134,7 +129,7 @@
 		D05CE0E9261BDB23006808CD /* telecode */ = {
 			isa = PBXGroup;
 			children = (
-				D020704B261C6FBD00B482AF /* ctc2hanzi.json */,
+				D087482D2639CB4600F6E152 /* ccc.json */,
 			);
 			path = telecode;
 			sourceTree = "<group>";
@@ -209,7 +204,7 @@
 				D05CE0A5261B432A006808CD /* Preview Assets.xcassets in Resources */,
 				D05CE0A2261B432A006808CD /* Assets.xcassets in Resources */,
 				D05CE0E7261BC98E006808CD /* tessdata in Resources */,
-				D020704C261C6FBD00B482AF /* ctc2hanzi.json in Resources */,
+				D087482E2639CB4600F6E152 /* ccc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,12 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08748312639D8A500F6E152 /* CardDetailView.swift in Sources */,
 				D05CE0BB261B46BD006808CD /* CardData.swift in Sources */,
-				D05CE0CA261B522B006808CD /* TextRecognitionService.swift in Sources */,
+				D0CD7F2F2639F594003E81B2 /* CardListView.swift in Sources */,
 				D05CE0A7261B432A006808CD /* Persistence.swift in Sources */,
+				D0CD7F2B2639F3A8003E81B2 /* AddCardView.swift in Sources */,
 				D05CE0A0261B4329006808CD /* ContentView.swift in Sources */,
 				D05CE0EE261BDB8F006808CD /* ChineseCommercialCodeService.swift in Sources */,
-				D05CE0BF261B4789006808CD /* HomeView.swift in Sources */,
 				D05CE09E261B4329006808CD /* HK_Smart_Identity_Card_ScannerApp.swift in Sources */,
 				D05CE0AA261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld in Sources */,
 			);
