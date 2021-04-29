@@ -16,6 +16,8 @@ struct AddCardView: View {
     @Binding var showView: Bool
     
     @ObservedObject var cardData = CardData()
+    
+    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State var showImagePicker: Bool = false
     @State var image: UIImage?
 
@@ -25,6 +27,13 @@ struct AddCardView: View {
                 Form {
                     Section(header: Text("SOURCE")) {
                         Button("Choose Image...") {
+                            self.sourceType = .photoLibrary
+                            self.showImagePicker.toggle()
+                        }
+                        .disabled(self.cardData.isRecognizing())
+                        
+                        Button("Open Camera...") {
+                            self.sourceType = .camera
                             self.showImagePicker.toggle()
                         }
                         .disabled(self.cardData.isRecognizing())
@@ -43,8 +52,8 @@ struct AddCardView: View {
                             if let face = self.cardData.face {
                                 Image(uiImage: face)
                                     .resizable()
-                                    .clipShape(Circle())
                                     .frame(width: 50.0, height: 50.0)
+                                    .clipShape(Circle())
                             }
                             
                             TextField("Chinese Name", text: $cardData.chineseName ?? "")
@@ -79,10 +88,10 @@ struct AddCardView: View {
                 }
             }
             .sheet(isPresented: $showImagePicker) {
-                ImagePickerView(sourceType: .photoLibrary) { image in
-                    self.image = image
+                ImagePickerView(sourceType: self.sourceType) { image in
+                    self.image = UIImage(data: image.pngData()!)
                     cardData.reset()
-                    cardData.recognizeText(in: image)
+                    cardData.recognize(in: self.image!)
                 }
             }
             .navigationBarTitle(Text("Add Card"), displayMode: .inline)

@@ -353,6 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HK Smart Identity Card Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = WZ4M9Q3KW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "HK Smart Identity Card Scanner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -374,6 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HK Smart Identity Card Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = WZ4M9Q3KW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "HK Smart Identity Card Scanner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

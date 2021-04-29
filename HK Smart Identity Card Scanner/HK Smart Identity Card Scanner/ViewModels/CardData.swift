@@ -65,7 +65,7 @@ class CardData: ObservableObject {
         return self.isEnglishRecognizing || self.isChineseRecognizing || self.isFaceRecognizing
     }
     
-    func recognizeText(in uiImage: UIImage) {
+    func recognize(in uiImage: UIImage) {
         self.source = uiImage
         self.face = uiImage
         self.isEnglishRecognizing = true
