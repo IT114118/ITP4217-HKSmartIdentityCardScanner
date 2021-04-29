@@ -89,7 +89,7 @@ struct AddCardView: View {
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePickerView(sourceType: self.sourceType) { image in
-                    self.image = UIImage(data: image.pngData()!)
+                    self.image = UIImage(data: image.jpegData(compressionQuality: 1.0)!)
                     cardData.reset()
                     cardData.recognize(in: self.image!)
                 }
@@ -130,8 +130,8 @@ struct AddCardView: View {
             newCard.cccString = cardData.cccString
             newCard.symbols = cardData.symbols
             newCard.number = cardData.number
-            newCard.face = cardData.face?.pngData()
-            newCard.source = cardData.source?.pngData()
+            newCard.face = cardData.face?.jpegData(compressionQuality: 1.0)
+            newCard.source = cardData.source?.jpegData(compressionQuality: 1.0)
 
             do {
                 try viewContext.save()
