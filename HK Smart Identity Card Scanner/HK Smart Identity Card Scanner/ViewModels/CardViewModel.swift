@@ -9,11 +9,14 @@ import SwiftUI
 import Foundation
 import Vision
 
-class CardData: ObservableObject {
+class CardViewModel: ObservableObject {
+    // Recognize state
     @Published var isEnglishRecognizing: Bool = false
     @Published var isChineseRecognizing: Bool = false
     @Published var isFaceRecognizing: Bool = false
+    @Published var isCardRecognizing: Bool = false
     
+    // HKID card information
     @Published var chineseName: String?
     @Published var englishName: String?
     @Published var dateOfBirth: String?
@@ -24,8 +27,20 @@ class CardData: ObservableObject {
     @Published var cccString: String?
     @Published var symbols: String?
     @Published var number: String?
+    
+    // HKID card images
     @Published var face: UIImage?
     @Published var source: UIImage?
+    
+    // Card Classifier
+    @Published var cardModel: Int16?
+    @Published var showAlert: Bool = false
+    
+    enum HKIDCardModel: Int16 {
+        case other = 0
+        case new = 1
+        case old = 2
+    }
     
     private var cccStringTemp: String?
     
@@ -33,6 +48,7 @@ class CardData: ObservableObject {
         self.isEnglishRecognizing = false
         self.isChineseRecognizing = false
         self.isFaceRecognizing = false
+        self.isCardRecognizing = false
         self.chineseName = nil
         self.englishName = nil
         self.dateOfBirth = nil
@@ -43,6 +59,10 @@ class CardData: ObservableObject {
         self.cccString = nil
         self.symbols = nil
         self.number = nil
+        self.face = nil
+        self.source = nil
+        self.cardModel = nil
+        self.showAlert = false
         self.cccStringTemp = nil
     }
     
@@ -62,22 +82,29 @@ class CardData: ObservableObject {
     }
     
     func isRecognizing() -> Bool {
-        return self.isEnglishRecognizing || self.isChineseRecognizing || self.isFaceRecognizing
+        return self.isEnglishRecognizing || self.isChineseRecognizing || self.isFaceRecognizing || self.isCardRecognizing
     }
     
     func recognize(in uiImage: UIImage) {
+        self.reset()
+        
         self.source = uiImage
-        self.face = uiImage
         self.isEnglishRecognizing = true
         self.isChineseRecognizing = true
         self.isFaceRecognizing = true
+        self.isCardRecognizing = true
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else { return }
         
             let handler = VNImageRequestHandler(cgImage: self.source!.cgImage!, options: [:])
             do {
-                try handler.perform([self.englishTextRecognitionRequest, self.chineseTextRecognitionRequest, self.faceDetectionRequest])
+                try handler.perform([
+                    self.englishTextRecognitionRequest,
+                    self.chineseTextRecognitionRequest,
+                    self.faceDetectionRequest,
+                    self.cardClassifierRequest,
+                ])
             } catch {
                 //self.delegate?.didFailRecognizeTextFromImage()
             }
@@ -141,13 +168,57 @@ class CardData: ObservableObject {
         return v
     }
     
+    private var cardClassifierRequest: VNCoreMLRequest {
+        let classifier: HKIDCardClassifier = {
+            do {
+                let config = MLModelConfiguration()
+                return try HKIDCardClassifier(configuration: config)
+            } catch {
+                print(error)
+                fatalError("Couldn't create HKIDCardClassifier")
+            }
+        }()
+        
+        let model = try! VNCoreMLModel(for: classifier.model)
+
+        let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
+            if let results = request.results as? [VNClassificationObservation] {
+                DispatchQueue.main.async { [weak self] in
+                    if let cardModel = results.first {
+                        if cardModel.confidence*100 > 60 {
+                            if cardModel.identifier == "Hong Kong New Smart Identity Card" {
+                                self?.cardModel = HKIDCardModel.new.rawValue
+                            } else if cardModel.identifier == "Hong Kong Smart Identity Card" {
+                                self?.cardModel = HKIDCardModel.old.rawValue
+                            } else {
+                                self?.cardModel = HKIDCardModel.other.rawValue
+                                self?.showAlert = true
+                            }
+                        } else {
+                            self?.cardModel = HKIDCardModel.other.rawValue
+                            self?.showAlert = true
+                        }
+       
+                        if Int(cardModel.confidence * 100) > 1 {
+                            print("Detected \(cardModel.identifier) with \(cardModel.confidence*100)")
+                        }
+                        
+                        self?.isCardRecognizing = false
+                    }
+                }
+            }
+        })
+        
+        return request
+    }
+    
     private var faceDetectionRequest: VNDetectFaceRectanglesRequest {
         let v = VNDetectFaceRectanglesRequest(completionHandler: { (request: VNRequest, error: Error?) in
             DispatchQueue.main.async {
                 if let results = request.results as? [VNFaceObservation], results.count > 0 {
                     print("did detect \(results.count) face(s)")
                     
-                    let originalFace: UIImage = self.face!
+                    let originalFace: UIImage = self.source!
                     var oldBoundingBox: CGRect? = nil
                     
                     for result in results {
@@ -191,7 +262,7 @@ class CardData: ObservableObject {
     }
     
     private func storeEnglish(_ data: String) {
-        if self.englishName == nil, let englishName = data.matchingStrings(regex: "[a-zA-Z\\s]{1,}\\,[a-zA-Z\\s]{1,}").first?[0] {
+        if self.englishName == nil, let englishName = data.matchingStrings(regex: "[a-zA-Z\\s]{1,}\\,[a-zA-Z\\s]{0,}").first?[0] {
             self.englishName = englishName
             print("self.englishName \(self.englishName!)")
         } else if self.ccc == [Int](), let cccString = data.matchingStrings(regex: "[0-9\\s]{4,}").first?[0], cccString.count > 4 && cccString[String.Index(utf16Offset: 4, in: cccString)] == " " {
@@ -239,7 +310,7 @@ class CardData: ObservableObject {
             if number.first! == "7" { number = "Z" + number.dropFirst() }
             self.number = number
             print("self.number \(self.number!)")
-        } else if data.matchingStrings(regex: "\\*").first?[0] == "*" {
+        } else if data.matchingStrings(regex: "\\*").first?[0] == "*" && data.count < 10 {
             var data = data
             if data.last! == "7" { data = data.dropLast() + "Z" }
             self.symbols = data.replacingOccurrences(of: "•", with: "*")

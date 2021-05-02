@@ -33,6 +33,17 @@ struct CardDetailView: View {
                 }
                 
                 HStack {
+                    Text("Card Model")
+                    Spacer()
+                    
+                    if card.model == 1 {
+                        Text("NEW")
+                    } else {
+                        Text("OLD")
+                    }
+                }
+                
+                HStack {
                     Text("Chinese Name")
                     Spacer()
                     Text(card.chineseName ?? "")
@@ -74,16 +85,18 @@ struct CardDetailView: View {
                     Text(card.dateOfIssue ?? "")
                 }
                 
-                HStack {
-                    Text("Date of Registration")
-                    Spacer()
-                    Text(card.dateOfRegistration ?? "")
-                }
-                
-                HStack {
-                    Text("Number")
-                    Spacer()
-                    Text(card.number ?? "")
+                Group {
+                    HStack {
+                        Text("Date of Registration")
+                        Spacer()
+                        Text(card.dateOfRegistration ?? "")
+                    }
+                    
+                    HStack {
+                        Text("Number")
+                        Spacer()
+                        Text(card.number ?? "")
+                    }
                 }
             }
         }

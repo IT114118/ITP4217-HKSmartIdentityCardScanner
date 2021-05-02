@@ -62,7 +62,7 @@ struct CardListView: View {
                     }
                 }
             }
-            .navigationBarTitle("Cards")
+            .navigationBarTitle("HKID Cards")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     Button(action: {

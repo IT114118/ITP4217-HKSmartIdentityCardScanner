@@ -8,8 +8,8 @@
         <attribute name="dateOfRegistration" optional="YES" attributeType="String"/>
         <attribute name="englishName" optional="YES" attributeType="String"/>
         <attribute name="face" optional="YES" attributeType="Binary"/>
+        <attribute name="model" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="number" optional="YES" attributeType="String"/>
-        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sex" optional="YES" attributeType="String"/>
         <attribute name="source" optional="YES" attributeType="Binary"/>
         <attribute name="symbols" optional="YES" attributeType="String"/>
