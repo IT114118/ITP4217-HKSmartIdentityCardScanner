@@ -12,6 +12,7 @@ import ImagePickerView
 
 struct AddCardView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     @Binding var showView: Bool
     
@@ -33,9 +34,23 @@ struct AddCardView: View {
                             Image(uiImage: image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                            
+                            if !cardData.isRecognizing() {
+                                Button(action: {
+                                    cardData.reset()
+                                }) {
+                                    Text("Remove")
+                                        .foregroundColor(Color.red)
+                                }
+                            }
                         } else {
-                            Button("Choose Image...") {
+                            Button(action: {
                                 self.showImagePicker = true
+                            }) {
+                                HStack {
+                                    Image(systemName: "photo")
+                                    Text("Choose Image...")
+                                }
                             }
                             .sheet(isPresented: $showImagePicker) {
                                 ImagePickerView(sourceType: .photoLibrary) { image in
@@ -43,8 +58,13 @@ struct AddCardView: View {
                                 }
                             }
                             
-                            Button("Open Camera...") {
+                            Button(action: {
                                 self.showCardScanner.toggle()
+                            }) {
+                                HStack {
+                                    Image(systemName: "camera")
+                                    Text("Open Camera...")
+                                }
                             }
                             .fullScreenCover(isPresented: $showCardScanner) {
                                 NavigationView {
@@ -63,25 +83,43 @@ struct AddCardView: View {
                                             }) {
                                                 Text("Cancel")
                                             }
-                                        },
-                                        trailing: Section {
-                                            Button(action: {
-                                                showDoneClicked = true
-                                            }) {
-                                                Text("Done")
-                                            }
                                         }
-                                        .disabled(showDoneClicked)
                                     )
+                                    .toolbar {
+                                        ToolbarItem(placement: .bottomBar) {
+                                            Spacer()
+                                        }
+                                        
+                                        ToolbarItem(placement: .bottomBar) {
+                                            Section {
+                                                Button(action: {
+                                                    showDoneClicked = true
+                                                }) {
+                                                    Text(" ")
+                                                    Image(systemName: "largecircle.fill.circle")
+                                                        .font(.largeTitle)
+                                                        .foregroundColor(colorScheme == .light ? .black : .white)
+                                                    Text(" ")
+                                                }
+                                            }
+                                            .disabled(showDoneClicked)
+                                        }
+                                        
+                                        ToolbarItem(placement: .bottomBar) {
+                                            Spacer()
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                     
-                    Section(header: Text("MASKED")) {
-                        if cardData.isRecognizing() {
+                    if cardData.isRecognizing() {
+                        Section(header: Text("MASKED")) {
                             ProgressView()
-                        } else if let image = cardData.masked {
+                        }
+                    } else if let image = cardData.masked {
+                        Section(header: Text("MASKED")) {
                             Image(uiImage: image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)

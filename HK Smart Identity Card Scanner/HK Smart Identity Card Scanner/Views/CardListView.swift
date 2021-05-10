@@ -70,7 +70,7 @@ struct CardListView: View {
                         self.editMode = EditMode.inactive
                     }) {
                         HStack {
-                            Image(systemName: "plus.circle.fill")
+                            Image(systemName: "plus.square")
                             Text("Add Card")
                         }
                     }
