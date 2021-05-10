@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES" codeGenerationType="class">
         <attribute name="cccString" optional="YES" attributeType="String"/>
         <attribute name="chineseName" optional="YES" attributeType="String"/>
@@ -8,6 +8,7 @@
         <attribute name="dateOfRegistration" optional="YES" attributeType="String"/>
         <attribute name="englishName" optional="YES" attributeType="String"/>
         <attribute name="face" optional="YES" attributeType="Binary"/>
+        <attribute name="masked" optional="YES" attributeType="Binary"/>
         <attribute name="model" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="number" optional="YES" attributeType="String"/>
         <attribute name="sex" optional="YES" attributeType="String"/>
@@ -20,7 +21,7 @@
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-63" positionY="-9" width="128" height="239"/>
+        <element name="Card" positionX="-63" positionY="-9" width="128" height="254"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
     </elements>
 </model>

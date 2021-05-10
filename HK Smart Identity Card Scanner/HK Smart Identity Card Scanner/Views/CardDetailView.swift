@@ -20,6 +20,14 @@ struct CardDetailView: View {
                 }
             }
             
+            if let source: Data = card.masked, let image: UIImage = UIImage(data: source) {
+                Section(header: Text("MASKED")) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
+            
             Section(header: Text("INFORMATION")) {
                 if let face: Data = card.face, let image: UIImage = UIImage(data: face) {
                     HStack {

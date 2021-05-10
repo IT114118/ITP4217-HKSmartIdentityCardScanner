@@ -74,32 +74,17 @@ struct AddCardView: View {
                                         .disabled(showDoneClicked)
                                     )
                                 }
-                                /*
-                                NavigationView {
-                                    CardScannerViewController(clicked: $showDoneClicked) { image in
-                                        cardData.recognize(in: UIImage(data: image.jpegData(compressionQuality: 1.0)!)!)
-                                    }
-                                    .navigationBarTitle(Text("HKID Card Scanner"), displayMode: .inline)
-                                    .navigationBarItems(
-                                        leading: Section {
-                                            Button(action: {
-                                                showCardScanner = false
-                                            }) {
-                                                Text("Cancel")
-                                            }
-                                        },
-                                        trailing: Section {
-                                            Button(action: {
-                                                showDoneClicked = true
-                                                //presentationMode.wrappedValue.dismiss()
-                                            }) {
-                                                Text("Done")
-                                            }
-                                        }
-                                    )
-                                }
-                                */
                             }
+                        }
+                    }
+                    
+                    Section(header: Text("MASKED")) {
+                        if cardData.isRecognizing() {
+                            ProgressView()
+                        } else if let image = cardData.masked {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                         }
                     }
                     
@@ -216,8 +201,9 @@ struct AddCardView: View {
             newCard.symbols = cardData.symbols
             newCard.number = cardData.number
             newCard.face = cardData.face?.jpegData(compressionQuality: 1.0)
+            newCard.masked = cardData.masked?.jpegData(compressionQuality: 1.0)
             newCard.source = cardData.source?.jpegData(compressionQuality: 1.0)
-            newCard.model = cardData.cardModel!
+            newCard.model = cardData.cardModel ?? CardViewModel.HKIDCardModel.unknown.rawValue
 
             do {
                 try viewContext.save()

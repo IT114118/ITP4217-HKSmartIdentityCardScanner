@@ -17,8 +17,6 @@
 		D05CE0AA261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0A8261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodeld */; };
 		D05CE0BB261B46BD006808CD /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0BA261B46BD006808CD /* CardViewModel.swift */; };
 		D05CE0C6261B4D63006808CD /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0C5261B4D63006808CD /* ImagePickerView */; };
-		D05CE0CF261B6465006808CD /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = D05CE0CE261B6465006808CD /* SwiftyTesseract */; };
-		D05CE0E7261BC98E006808CD /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = D05CE0E6261BC98E006808CD /* tessdata */; };
 		D05CE0EE261BDB8F006808CD /* ChineseCommercialCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */; };
 		D087482E2639CB4600F6E152 /* ccc.json in Resources */ = {isa = PBXBuildFile; fileRef = D087482D2639CB4600F6E152 /* ccc.json */; };
 		D08748312639D8A500F6E152 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08748302639D8A500F6E152 /* CardDetailView.swift */; };
@@ -38,7 +36,6 @@
 		D05CE0A9261B432A006808CD /* HK_Smart_Identity_Card_Scanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HK_Smart_Identity_Card_Scanner.xcdatamodel; sourceTree = "<group>"; };
 		D05CE0AB261B432A006808CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05CE0BA261B46BD006808CD /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		D05CE0E6261BC98E006808CD /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		D05CE0ED261BDB8F006808CD /* ChineseCommercialCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCommercialCodeService.swift; sourceTree = "<group>"; };
 		D087482D2639CB4600F6E152 /* ccc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ccc.json; sourceTree = "<group>"; };
 		D08748302639D8A500F6E152 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 			files = (
 				D0207049261C6CBA00B482AF /* SwiftyJSON in Frameworks */,
 				D05CE0C6261B4D63006808CD /* ImagePickerView in Frameworks */,
-				D05CE0CF261B6465006808CD /* SwiftyTesseract in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +86,6 @@
 			children = (
 				D05098B2263D76C7003CF722 /* ViewControllers */,
 				D05CE0E9261BDB23006808CD /* telecode */,
-				D05CE0E6261BC98E006808CD /* tessdata */,
 				D05CE0C8261B520D006808CD /* Services */,
 				D05CE0C2261B489C006808CD /* ViewModels */,
 				D05CE0B9261B467B006808CD /* Views */,
@@ -166,7 +161,6 @@
 			name = "HK Smart Identity Card Scanner";
 			packageProductDependencies = (
 				D05CE0C5261B4D63006808CD /* ImagePickerView */,
-				D05CE0CE261B6465006808CD /* SwiftyTesseract */,
 				D0207048261C6CBA00B482AF /* SwiftyJSON */,
 			);
 			productName = "HK Smart Identity Card Scanner";
@@ -198,7 +192,6 @@
 			mainGroup = D05CE091261B4329006808CD;
 			packageReferences = (
 				D05CE0C4261B4D63006808CD /* XCRemoteSwiftPackageReference "ImagePickerView" */,
-				D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
 				D0207047261C6CBA00B482AF /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D05CE09B261B4329006808CD /* Products */;
@@ -217,7 +210,6 @@
 			files = (
 				D05CE0A5261B432A006808CD /* Preview Assets.xcassets in Resources */,
 				D05CE0A2261B432A006808CD /* Assets.xcassets in Resources */,
-				D05CE0E7261BC98E006808CD /* tessdata in Resources */,
 				D087482E2639CB4600F6E152 /* ccc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +438,6 @@
 				minimumVersion = 0.5.0;
 			};
 		};
-		D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyTesseract/SwiftyTesseract";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -466,11 +450,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D05CE0C4261B4D63006808CD /* XCRemoteSwiftPackageReference "ImagePickerView" */;
 			productName = ImagePickerView;
-		};
-		D05CE0CE261B6465006808CD /* SwiftyTesseract */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D05CE0CD261B6465006808CD /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
-			productName = SwiftyTesseract;
 		};
 /* End XCSwiftPackageProductDependency section */
 

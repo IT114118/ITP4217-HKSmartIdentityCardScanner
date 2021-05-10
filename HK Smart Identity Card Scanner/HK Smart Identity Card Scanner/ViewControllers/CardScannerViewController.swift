@@ -10,7 +10,7 @@ import Vision
 import SwiftUI
 import AVFoundation
 
-protocol UICardScannerViewDelegate: class {
+protocol UICardScannerViewDelegate: AnyObject {
     func didScanImage(_ image: UIImage)
 }
 
