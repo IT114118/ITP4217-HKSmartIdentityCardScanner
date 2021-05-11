@@ -8,7 +8,6 @@
 import SwiftUI
 import CoreData
 import ImagePickerView
-// import SwiftyTesseract
 
 struct AddCardView: View {
     @Environment(\.managedObjectContext) private var viewContext
